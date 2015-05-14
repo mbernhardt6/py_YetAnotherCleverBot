@@ -3,7 +3,7 @@
 #description     :Grab questions from Reddit comments and reply with CleverBot Response.
 #author          :Yelly Von Hollerlots
 #date            :20140603
-#version         :0.5
+#version         :0.6
 #usage           :python YetAnotherCleverBot.py
 #notes           :
 #python_version  :2.7
@@ -99,6 +99,7 @@ if __name__ == "__main__":
                   try:
                     redComment.reply(strAnswer)
                     arrTouched.append(thing.id)
+                    logger.logMessage(fileLog, '  Success! Happy trolling!')
                   except:
                     logger.logMessage(fileLog, '  Oops! There was a problem posting the reply.')
                     break
